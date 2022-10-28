@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+</html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Gift Box</title>
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover, shrink-to-fit=no" />
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="//cdn.rawgit.com/donmccurdy/aframe-physics-system/v4.0.1/dist/aframe-physics-system.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
+  </head>
+</head>
+
+<body>
+    <a-scene physics>
+        <a-assets>
+            <a-asset-item id="giftbox" src="/assets/old_chest/scene.gltf"></a-asset-item>
+        </a-assets>
+        <a-sky color="#6EBAA7"></a-sky>
+        <a-entity light="type: directional; color: #EEE; intensity: 0.8;castShadow:true;" position="-1 1 0"></a-entity>
+        <a-entity light="type: hemisphere; color: #33C; groundColor: #3C3; intensity: 2"></a-entity>
+
+        <a-entity dynamic-body gltf-model="#giftbox" position="-10 8 -4" rotation="0 43 0" shadow="cast: true"></a-entity>
+        <a-entity dynamic-body gltf-model="#giftbox" position="-5 8 -8" rotation="0 35 0" shadow="cast: true"></a-entity>
+        <a-entity dynamic-body gltf-model="#giftbox" position="0 8 -10" shadow="cast: true" animation-mixer="clip: none"></a-entity>
+        <a-entity dynamic-body gltf-model="#giftbox" position="5 8 -8" rotation="0 -35 0" shadow="cast: true"></a-entity>
+        <a-entity dynamic-body gltf-model="#giftbox" position="10 8 -4" rotation="0 -43 0" shadow="cast: true"></a-entity>
+
+        <a-plane static-body color="#CCC" height="100" width="100" rotation="-90 0 0" shadow="receive: true"></a-plane>
+    </a-scene>
+</body>
