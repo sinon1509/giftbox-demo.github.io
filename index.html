@@ -70,8 +70,8 @@
 <body>
     <a-scene physics shadow="type: pcfsoft">
         <a-assets>
-            <a-asset-item id="giftbox" src="/assets/old_chest/scene.gltf"></a-asset-item>
-            <a-asset-item id="frog" src="/assets/low_poly_decorated_christmas_tree/scene.gltf"></a-asset-item>
+            <a-asset-item id="giftbox" src="/assets/old_chest/scene.gltf" timeout="10000"></a-asset-item>
+            <a-asset-item id="frog" src="/assets/low_poly_decorated_christmas_tree/scene.gltf" timeout="10000"></a-asset-item>
             <a-mixin id="myBox" dynamic-body gltf-model="#giftbox" shadow="cast: true" click-anim></a-mixin>
             <a-mixin id="starAwake" particle-system="color: #014421,#b00b13; particleCount: 50; size:2; positionSpread:20 20 20"></a-mixin>
         </a-assets>
